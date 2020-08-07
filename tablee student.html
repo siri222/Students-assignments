@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<link rel="stylesheet" href="ec.css">
+    </head>
+<body>
+
+
+<p id="demo"></p>
+<script>
+var data=[
+{
+    "name":"Abhishek",
+    "marks":{
+        "Maths":"43",
+        "English":"30",
+        "Science":"37"
+    },
+    "rollNumber":"KV2017-5A1",
+    "status":"Pass"
+},
+{
+    "name":"Rajiv",
+    "marks":{
+        "Maths":"18",
+        "English":"21",
+        "Science":"45"
+    },
+    "rollNumber":"KV2017-5A2","status":"Fail"
+},
+
+{
+    "name":"Zoya",
+    "marks":{
+        "Maths":"42",
+        "English":"31",
+        "Science":"50"
+    },
+    "rollNumber":"KV2017-5A3","status":"Topper"
+
+}
+];
+
+  var  txt = "<table border='1' ><tr><caption><th>STUDENT RESULT BOARD</th></tr></caption><tr><th>Student name</th><th>Total Marks</th><th>rollnumber</th><th>Status</th></tr>"
+    for (x in data) {
+     if(data[x].status=="Topper"){
+
+     txt += "<tr style='color:green'><td>" + data[x].name + "</td>";
+     }else if(data[x].status=="Pass"){
+       txt += "<tr style='color:black'><td>" + data[x].name + "</td>";
+
+      }else{
+      txt += "<tr style='color:red'><td>" + data[x].name + "</td>";
+      }
+     
+      txt +="<td>"+(Number(data[x].marks.Maths)+Number(data[x].marks.English)+Number(data[x].marks.Science))+"</td>";
+      txt +="<td>"+data[x].rollNumber+"</td>";
+     
+      txt +="<td>"+data[x].status+"</td></tr>";
+     
+
+    }
+    txt += "</table>"    
+    document.getElementById("demo").innerHTML = txt;
+
+</script>
+</body>
+</html>

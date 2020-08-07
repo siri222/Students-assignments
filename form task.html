@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+   <head>
+<link rel="stylesheet" href="style.css">
+    </head>
+<body>
+
+<form>
+  <div class="container">
+    <h1>School Admission Form</h1>
+   
+    <hr>
+
+    <label for="name"><b>Name</b></label>
+  
+    <input type="text" name="name" id="name" placeholder="Last Name" pattern="^[a-zA-Z]\w{3,20}$" required>
+			
+
+    <label for="lastname"><b>Last Name</b></label>
+    <input type="text"  placeholder="Last Name" pattern= "^[a-zA-Z]\w{3,20}$" name="lastname" id="lname" required>
+    
+     <label for="number"><b>Class</b></label>
+    <input type="text" placeholder="class" pattern= "^[a-zA-Z]\w{3,20}$" name="class" id="class"  required>
+
+   
+        <label for="number"><b>Year of passing</b></label>
+        <input type="number" name="year" id="year" max="2017" pattern="^[0-9]{4}$">
+    <label for="number"><b>Percentage of marks</b></label>
+        <input type="number" id="per" name="per" pattern="^[0-9]$">
+
+    <button type="submit" class="registerbtn">Register</button>
+  </div>
+  
+ 
+</form>
+
+</body>
+</html>
